@@ -174,8 +174,9 @@ section h1 {
   }
 
   input, textarea{
-     outline:0;
+     outline: none;
      width:80%;
+     height: 30px;
   }
 
   textarea{
