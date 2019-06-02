@@ -3,32 +3,23 @@
 * {
    margin: 0;
    padding: 0;
-   outline: 0;
    box-sizing: border-box;
    -moz-box-sizing: border-box;
    line-height: 1.6;
+   
 }
 
-html{
+html, body{
    height: 100%;
 }
 
-header ul li { 
-   list-style: none;
-   display: inline;
-   font-size:14px;
+body{
+   display:flex;
+   flex-direction: column;
 }
-
-a{
-   text-decoration: none;
-   padding:5px;
-   color:#fff;
+main{
+   flex:1;
 }
-
-a:hover{
-   color: $purple-color;
-}
-
 /** Classe para Centralizar**/
 .container {
    max-width:960px;
@@ -44,17 +35,41 @@ a:hover{
    justify-content: space-between;
    align-items: center;
    flex-wrap: wrap;
+   flex-shrink: 0;
+   
 }
 
 header { 
+    position:fixed;
     font-family:'Hind', sans-serif;
     font-weight:300;
     color:#fff;
     background-color: $bg-color;
     height: 50px;
-    
+}
+section div {
+   margin:$external-spacing;
+   
 }
 
+header ul li { 
+   list-style: none;
+   display: inline;
+   font-size:14px;
+}
+
+/* Cabeçalho*/
+a{
+   text-decoration: none;
+   padding:5px;
+   color:#fff;
+}
+
+a:hover{
+   color: $purple-color;
+}
+
+/*logo*/
 a img{
    width:120px;
 }
@@ -67,6 +82,22 @@ section{
     color: #68687C;
 }
 
+/*Section geral*/
+section h1 {
+   font-weight:600;
+   color: #34314B;
+  
+}
+
+/*Para H1 ocupar a linha inteira*/
+.flex-basis-grow{
+   flex-grow: 1;
+   flex-basis: 960px;
+   padding-bottom:$internal-spacing;
+}
+
+
+/*Sobre/ imagem*/
 #sobre img{
     float:left;
     width:$size;
@@ -77,49 +108,62 @@ section{
     shape-margin: 15px;
 }
 
-section h1 {
-    font-weight:600;
-    color: #34314B;
-    padding-bottom:$internal-spacing;
-}
-
-.flex-basis-grow{
-    flex-grow: 1;
-    flex-basis: 960px;
-}
-
+/*Habilidades*/
 #skills{
-    align-items:initial;
+    align-items: flex-start;
 }
 
 #skills ul li{
     list-style:circle;
+    
+}
+.star{
+   width:20px;
+   height: 20px;
  }
+ 
+ .ul-idiomas li{
+   display:inline;
+   list-style: none;
+ }
+ 
+ 
 
+/*Portfólio*/
 .port-item{
     width:$size;
     height:$size;
     border: 1px solid $purple-color;
     margin:5px;
     border-radius:5px;
+ 
 }
+
+
+/*Contato - Formulário */
 
  input, textarea{
     outline: none;
+    outline:0;
     border-radius:3px;
     padding:5px;
     margin:10px 0 10px 0;
     border:none;
     box-sizing: border-box;
-    outline:0;
+    width:80%;
   }
- 
+
+  form button {
+   margin-left:auto;
+   margin-right:auto;
+}
+
   button{
-     border:none;
-     border-radius:5px;
      width:100px;
      height:40px;
      padding:10px;
+     border:none;
+     border-radius:5px;
      cursor:pointer;
      text-align:center;
      background-color:$purple-color;
@@ -132,17 +176,62 @@ section h1 {
      background-color:#fff;
      border:1px solid grey;
   }
- 
- form button {
-    margin-left:auto;
-    margin-right:auto;
 
- }
-  footer{
+  #contato{
+   background-color:#ccc;
+}
+
+.contato-item{
+   margin:10px;
+   width:45%;
+}
+
+.contato-item p{
+   color:#000;
+  
+}
+
+
+input{ 
+   height: 35px;
+}
+
+textarea{
+   height: 86px;
+}
+
+input::placeholder{
+   font-family:'Courier';
+   font-size:13px;
+   padding:5px;
+
+}
+
+input:focus, textarea:focus{
+   border:2px solid $purple-color;
+}
+
+/*Habilidads*/
+.social li{
+
+ display: inline;
+ list-style: none;
+ padding:0;
+
+}
+
+.social li img{
+ width:25px;
+ height:25px;
+ animation:none;
+}
+
+footer{
      display:flex;
      justify-content: center;
      align-items: center;
-     height:100px;
+   
+     height:150px;
      font-family:'Hind', sans-serif;
      font-weight:400px;
      background-color:$bg-color;
@@ -157,62 +246,26 @@ section h1 {
   footer img {
      width:25px;
      height:25px;
-     margin : 0 5px 0 5px;
+     
      animation : pulse 1s infinite alternate ease-in-out;
  
   }
- 
-  #contato{
-     background-color:#ccc;
-     
+
+  .text{
+   width:250px;
+  }
+
+  .icons{
+   width:200px;
+
+  }
+
+  .item-foo{
+     height:40px;
     
   }
-
-
-  .contato-item{
-     width:50%;
-  }
-
-  input, textarea{
-     outline: none;
-     width:80%;
-     height: 30px;
-  }
-
-  textarea{
-     height: 86px;
-  }
-
-  input::placeholder{
-     font-family:'Courier';
-     font-size:13px;
-     padding:5px;
-
-  }
-
-  input:focus, textarea:focus{
-     border:1px solid $purple-color;
+  
+  .item-foo:nth-child(1){
+     margin:auto;
   }
  
- .star{
-    width:20px;
-    height: 20px;
- }
-
- .ul-idiomas li{
-    display:inline;
-    list-style: none;
- }
-
-.social li{
-   display: inline;
-   list-style: none;
-  
-}
-
-.social li img{
-   width:25px;
-   height:25px;
-   animation:none;
-}
-
