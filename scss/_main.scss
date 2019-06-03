@@ -13,13 +13,8 @@ html, body{
    height: 100%;
 }
 
-body{
-   display:flex;
-   flex-direction: column;
-}
-main{
-   flex:1;
-}
+
+
 /** Classe para Centralizar**/
 .container {
    max-width:960px;
@@ -35,11 +30,13 @@ main{
    justify-content: space-between;
    align-items: center;
    flex-wrap: wrap;
-   flex-shrink: 0;
+   
    
 }
 
 header { 
+   top:0;
+    width:100%;
     position:fixed;
     font-family:'Hind', sans-serif;
     font-weight:300;
@@ -80,6 +77,8 @@ section{
     font-family:'Hind', sans-serif;
     font-weight:400;
     color: #68687C;
+ 
+    
 }
 
 /*Section geral*/
@@ -98,6 +97,9 @@ section h1 {
 
 
 /*Sobre/ imagem*/
+#sobre{
+   margin-top:50px;
+}
 #sobre img{
     float:left;
     width:$size;
@@ -106,6 +108,7 @@ section h1 {
     shape-outside:circle();
     margin-right: 15px;
     shape-margin: 15px;
+    max-width: 100%
 }
 
 /*Habilidades*/
@@ -157,6 +160,8 @@ section h1 {
    margin-left:auto;
    margin-right:auto;
 }
+
+
 
   button{
      width:100px;
@@ -230,8 +235,7 @@ footer{
      display:flex;
      justify-content: center;
      align-items: center;
-   
-     height:150px;
+     height:100px;
      font-family:'Hind', sans-serif;
      font-weight:400px;
      background-color:$bg-color;
@@ -256,13 +260,13 @@ footer{
   }
 
   .icons{
-   width:200px;
+   width:120px;
 
   }
 
   .item-foo{
      height:40px;
-    
+
   }
   
   .item-foo:nth-child(1){
