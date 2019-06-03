@@ -6,14 +6,11 @@
    box-sizing: border-box;
    -moz-box-sizing: border-box;
    line-height: 1.6;
-   
 }
 
 html, body{
    height: 100%;
 }
-
-
 
 /** Classe para Centralizar**/
 .container {
@@ -44,8 +41,10 @@ header {
     background-color: $bg-color;
     height: 50px;
 }
+
 section div {
    margin:$external-spacing;
+   
    
 }
 
@@ -100,6 +99,7 @@ section h1 {
 #sobre{
    margin-top:50px;
 }
+
 #sobre img{
     float:left;
     width:$size;
@@ -108,18 +108,22 @@ section h1 {
     shape-outside:circle();
     margin-right: 15px;
     shape-margin: 15px;
-    max-width: 100%
+    object-fit: cover;
 }
 
 /*Habilidades*/
 #skills{
     align-items: flex-start;
+    background-color:pink;
 }
 
-#skills ul li{
-    list-style:circle;
-    
+.skill-item{
+   flex:1;
+   width:calc(960px / 4 - $internal-spacing);
+  background-color:#ccc;
 }
+
+
 .star{
    width:20px;
    height: 20px;
