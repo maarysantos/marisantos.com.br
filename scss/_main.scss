@@ -21,16 +21,19 @@ html, body{
 
 /**flexbox**/
 .flex-box{
+   display:-webkit-box;
+   display:-ms-flexbox;
    display:flex;
-   display: -ms-flexbox;
-
-   justify-content: space-between;
-   align-items: center;
-   flex-wrap: wrap;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;}
    
    
-}
-
 header { 
    top:0;
     width:100%;
@@ -91,12 +94,45 @@ section h1 {
    flex-basis: 960px;
    padding-bottom:$internal-spacing;
 }
+body{
+   margin-top:0;
+}
+/*Photo by Safar Safarov on Unsplash*/
+#intro {
+ 
+   background-image:url('../img/modificada.jpg');
+   background-attachment: fixed;
+   height:480px;
+   background-size:cover;
+   background-repeat:no-repeat;
+}
+
+#intro .row1{
+   
+   position: absolute;
+   top:290px;
+   right:10px;
+   left: 10px;
+   color:#fff;
+   font-size:50px;
+   font-weight: 900;
+   letter-spacing: 5px;
+   text-align:center;
+}
+#intro .row2{
+   position: absolute;
+   top:360px;
+   right:10px;
+   left: 10px;
+   color:#fff;
+   font-size:50px;
+   
+   text-align:center;
+}
+
 
 
 /*Sobre/ imagem*/
-#sobre{
-   margin-top:50px;
-}
 
 #sobre img{
     float:left;
@@ -284,3 +320,10 @@ footer{
      margin:auto;
   }
  
+.icon{
+   width:80px;
+   height:80px;
+   border : 2px solid red;
+   border-radius:50%;
+  
+}
