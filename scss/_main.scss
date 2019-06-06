@@ -35,17 +35,23 @@ html, body{
    
    
 header { 
-   top:0;
+    top:0;
+    z-index: 10;
     width:100%;
     position:fixed;
     font-family:'Hind', sans-serif;
     font-weight:300;
     color:#fff;
-    background-color: $bg-color;
+    background-color: rgba(36, 36, 51, 0);
     height: 50px;
 }
 
+.fx header{
+   background-color: $bg-color-fx;
+}
+
 section div {
+   
    margin:$external-spacing;
    
    
@@ -99,15 +105,41 @@ body{
 }
 /*Photo by Safar Safarov on Unsplash*/
 #intro {
- 
+   position: relative;
+   width: 100%;
+   max-width: 100%;
+   height: 100vh;
+   max-height: 100vh;
    background-image:url('../img/modificada.jpg');
    background-attachment: fixed;
-   height:480px;
+   background-position:center center;
    background-size:cover;
    background-repeat:no-repeat;
+   
+}
+.fa-angle-down{
+   color:#574AE2;
 }
 
-#intro .row1{
+.scroll-down-icon {
+   position: absolute;
+   left: 50%;
+   bottom: 30px;
+   -webkit-animation: scroll-down-anim 1s infinite;
+   -moz-animation: scroll-down-anim 1s infinite;
+   -o-animation: scroll-down-anim 1s infinite;
+   animation: scroll-down-anim 1s infinite;
+   z-index: 2;
+}
+
+@keyframes scroll-down-anim{
+   0% {bottom:30px;}
+   100% {bottom:40px; }
+}
+
+
+
+#intro .row-1{
    
    position: absolute;
    top:200px;
@@ -119,18 +151,16 @@ body{
    letter-spacing: 5px;
    text-align:center;
 }
-#intro .row2{
+
+#intro .row-2{
    position: absolute;
    top:260px;
    right:10px;
    left: 10px;
    color:#fff;
    font-size:50px;
-   
    text-align:center;
 }
-
-
 
 /*Sobre/ imagem*/
 
@@ -176,8 +206,6 @@ body{
  
  }
  
- 
-
 /*Portfólio*/
 .port-item{
     width:$size;
@@ -185,9 +213,7 @@ body{
     border: 1px solid $purple-color;
     margin:5px;
     border-radius:5px;
- 
 }
-
 
 /*Contato - Formulário */
 
@@ -206,7 +232,6 @@ body{
    margin-left:auto;
    margin-right:auto;
 }
-
 
 
   button{
@@ -285,7 +310,7 @@ footer{
      height:100px;
      font-family:'Hind', sans-serif;
      font-weight:400px;
-     background-color:$bg-color;
+     background-color:$bg-color-fx;
      color: #fff;
   }
   
@@ -320,7 +345,8 @@ footer{
      margin:auto;
   }
  
-.icon{
+  //circulo em cada card skill
+.circle{
    width:80px;
    height:80px;
    border : 2px solid red;
