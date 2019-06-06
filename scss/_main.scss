@@ -48,6 +48,7 @@ header {
 
 .fx header{
    background-color: $bg-color-fx;
+   transition: all .4s;
 }
 
 section div {
@@ -118,7 +119,8 @@ body{
    
 }
 .fa-angle-down{
-   color:#574AE2;
+   color:#fff;
+   //#574AE2;
 }
 
 .scroll-down-icon {
@@ -176,35 +178,84 @@ body{
 }
 /*Habilidades*/
 #skills{
-    align-items: flex-start;
+   align-items: flex-start;
+   
    
 }
 
 .skill-item{
+   display:flex;
+   flex-direction: column;
    flex:1;
-   padding:inherit;
+   padding:0;
    margin: 10px;
    width:calc(960px / 4 );
+   /*border-radius:5px;
+   border: 1px solid #ccc;*/
+}
+
+.skill-item:hover i{
+   color:$purple-color;
+   cursor:text;
+   
+}
+
+.skill-item i, .skill-item h3, .skill-item ul{
+   text-align:center;
+   padding:10px;
+}
+
+.skill-item ul li{
+   padding:5px;
+   //padding:5px 0 5px 0;
 }
 
 
-.skill-item li ul{
-   margin-left:30px;
+
+.idiomas .ul-idiomas li {
+   
+  // text-align:center;
+   display:inline;
+  
+}
+
+
+.skill-item ul > li{
    list-style: none;
 }
 
+ //circulo em cada card skill
+ .circle{
+   width:80px;
+   height:80px;
+   border : 1px solid pink;
+   border-radius:50%;
+  
+}
 
 .star{
    width:20px;
    height: 20px;
+  
  }
  
- 
- .ul-idiomas li{
-   display:inline;
-   list-style: none;
- 
+ //Formação Academica
+.form-item{
+   flex-direction: row;
+   
+}
+ /*.form-item img{
+    width:250px;
+    height:100px;
+ }*/
+
+ .form-item img{
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 14px;
+padding:5px;
+border-radius: 8px;
  }
+ 
+
  
 /*Portfólio*/
 .port-item{
@@ -345,11 +396,4 @@ footer{
      margin:auto;
   }
  
-  //circulo em cada card skill
-.circle{
-   width:80px;
-   height:80px;
-   border : 2px solid red;
-   border-radius:50%;
-  
-}
+ 
