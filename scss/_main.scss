@@ -240,19 +240,11 @@ body{
  }
  
  //Formação Academica
-.form-item{
-   flex-direction: row;
-   
-}
- /*.form-item img{
-    width:250px;
-    height:100px;
- }*/
-
  .form-item img{
    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 14px;
-padding:5px;
-border-radius: 8px;
+   padding:5px;
+   border-radius: 8px;
+   
  }
  
 
@@ -266,93 +258,44 @@ border-radius: 8px;
     border-radius:5px;
 }
 
-/*Contato - Formulário */
+/*Contato*/
 
- input, textarea{
-    outline: none;
-    outline:0;
-    border-radius:3px;
-    padding:5px;
-    margin:10px 0 10px 0;
-    border:none;
-    box-sizing: border-box;
-    width:80%;
-  }
-
-  form button {
-   margin-left:auto;
-   margin-right:auto;
-}
-
-
-  button{
-     width:100px;
-     height:40px;
-     padding:10px;
-     border:none;
-     border-radius:5px;
-     cursor:pointer;
-     text-align:center;
-     background-color:$purple-color;
-     color:#fff;
-     transition: color 1s, background-color 1s, border 1s;
-  }
- 
-  button:hover {
-     color:$purple-color;
-     background-color:#fff;
-     border:1px solid grey;
-  }
-
-  #contato{
-   margin-bottom:0;
+#contato{
    background-color:#ccc;
+   color:#34314B;
+   margin-bottom: 0;
 }
 
+address{
+   margin-top:$internal-spacing;
+}
+
+#contato .container{
+   padding: $internal-spacing;
+   background-color: aqua;
+}
 .contato-item{
-   margin:10px;
-   width:45%;
+   background-color: #68687C;
+   width:70%;
+   text-align: center;
+            }
+
+#contato a {
+   color:#34314B;
+
 }
-
-.contato-item p{
-   color:#000;
-  
-}
-
-
-input{ 
-   height: 35px;
-}
-
-textarea{
-   height: 86px;
-}
-
-input::placeholder{
-   font-family:'Courier';
-   font-size:13px;
-   padding:5px;
+#contato a:hover {
+   color:$purple-color;
 
 }
 
-input:focus, textarea:focus{
-   border:2px solid $purple-color;
-}
-
-/*Habilidads*/
 .social li{
-
  display: inline;
  list-style: none;
  padding:0;
 
 }
 
-.social li img{
- width:25px;
- height:25px;
- animation:none;
-}
 
 footer{
      display:flex;
@@ -392,8 +335,6 @@ footer{
 
   }
   
-  .item-foo:nth-child(1){
-     margin:auto;
-  }
+
  
  
