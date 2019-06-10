@@ -54,8 +54,6 @@ header {
 section div {
    
    margin:$external-spacing;
-   
-   
 }
 
 header ul li { 
@@ -240,14 +238,18 @@ body{
  }
  
  //Formação Academica
+
+ .form-item{
+   justify-content: flex-start;
+   align-items: flex-start;
+    
+ }
  .form-item img{
    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 14px;
    padding:5px;
    border-radius: 8px;
    
  }
- 
-
  
 /*Portfólio*/
 .port-item{
@@ -264,27 +266,34 @@ body{
    background-color:#ccc;
    color:#34314B;
    margin-bottom: 0;
-}
-
-address{
-   margin-top:$internal-spacing;
+   font-size: 18px;
 }
 
 #contato .container{
    padding: $internal-spacing;
-   background-color: aqua;
 }
+
+address{
+   margin-top:$internal-spacing;
+  
+}
+
+
+
 .contato-item{
-   background-color: #68687C;
-   width:70%;
-   text-align: center;
-            }
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;   
+   flex-direction: column;       
+ }
 
-#contato a {
+.contato-item a {
    color:#34314B;
+ 
 
 }
-#contato a:hover {
+.contato-item a:hover {
    color:$purple-color;
 
 }
