@@ -1,5 +1,5 @@
 (function(){
-    var $menu = document.getElementsByName('header');
+    var $menu = document.querySelector('header');
     
     window.addEventListener('scroll', setupNav);
     
