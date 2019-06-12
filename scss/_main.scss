@@ -33,7 +33,6 @@ html, body{
    -ms-flex-wrap: wrap;
        flex-wrap: wrap;}
    
-   
 header { 
     top:0;
     z-index: 10;
@@ -391,13 +390,29 @@ footer{
 
   footer a{
      margin-right:5px;
+   
   }
 
   footer a:hover{
    border-bottom:2px solid #fff;
+   
 }
 
+//pagina copyright
+#copyright a{
+   color:#34314B;
 
+}
+.copy-item{
+   width:300px;
+   height:100px;
+   background-color:#ccc;
+   border-radius:5px;
+}
 
+#copyright .flex-box{
+   justify-content: flex-start;
+
+}
  
  
