@@ -7,8 +7,13 @@
     <!--Favicon png  -->
     <link rel="icon" href="img/favicon.png" />
 
+    <!-- Normalize.css -->
+    <link href="./css/normalize.css" type ="text/css" rel="stylesheet"/>
+
     <!-- CSS Personalizado -->
     <link href="./css/style.css" type ="text/css" rel="stylesheet"/>
+
+
    
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css?family=Hind:300,400,600&display=swap" rel="stylesheet"> 
@@ -30,8 +35,8 @@
             <nav>
                 <ul>
                     <a href="index.html"><li>HOME</li></a>
-                    <a href="#"><li>SOBRE</li></a>
-                    <a href="#"><li>CONTATO</li></a>
+                    <a href="#sobre"><li>SOBRE</li></a>
+                    <a href="#contato"><li>CONTATO</li></a>
                     <a href="#"><li>BLOG</li></a>
                 </ul>
             </nav>
@@ -57,9 +62,9 @@
         <h1>Olá, Bem Vindo</h1>
         <p>Meu nome é Mari Santos, sou desenvolvedora web, graduada em Ciência da Computação 
         e tecnóloga em Informática para Internet.</p>
-        <p> Moro no Guarujá/SP. Sou apaixonada por tecnologias web, especialmente por aquelas construídas com Javascript,  Nodejs e React. </p>
+        <p> Moro no Guarujá/SP. Amo tecnologias web, especialmente por aquelas construídas com Javascript,  Nodejs e React. </p>
         <p>Venho adquirindo conhecimentos de forma autodidata, através de cursos online, livros, sites e da comunidade.
-        <p> Gosto de aprender coisas novas e de estar constantemente sendo desafiada.</p>
+        <p> Estou sempre em busca de novos desafios, gosto de aprender coisas novas e de estar constantemente sendo desafiada.</p>
     </section>
     
     <!--Habilidades(Skills)  -->
@@ -178,29 +183,49 @@
         
     <!--Contato -->
     <section id="contato">
-        <div class="container ">
+        <div class="container flex-box">
             <h1 class="flex-basis-grow">Entre em contato</h1>
 
             <div class="contato-item ">
                 <p>Sinta-se a vontade para entrar em contato comigo enviando um email ou através das minhas redes sociais.
                      Se você tiver dúvidas ou comentários, terei prazer em responder! </p>
+                     <div class="coloredLine"></div>
 
-                <address> 
-                        <span><i class="far fa-envelope"></i>&nbsp;<strong>Email:</strong></span>
-                        maary.santos1@gmail.com <br>
-                        <span> <i class="fas fa-mobile-alt"></i>&nbsp;<strong>Telefone:</strong></span>
-                        (13) 988541172
-                 
-                </address>
+                
             </div>
-            <div class="contato-item">
-                <ul class="social">
+
+            <div class="contato-item flex-box">
+
+                <div>
+                   <ul class="social">
                         <li> <a href="https://www.linkedin.com/in/marilaine-santos/" target="__blank"> <i class="fab fa-linkedin-in fa-lg"></i>
                         </a> </li>
-                        <li> <a href="https://github.com/maarysantos" target="__blank" >  <i class="fab fa-github  fa-lg"></i>
-                        </a></li>
                         <li> <a href="https://twitter.com/x__Mary" target="__blank" >  <i class="fab fa-twitter  fa-lg"></i> </a></li>
-                        </ul>
+                    </ul>
+                    <h4>Redes Sociais</h4>
+                </div>
+                <div>
+                    
+                    <a href="https://github.com/maarysantos" target="__blank" >  <i class="fab fa-github  fa-lg"></i>
+                        </a>
+                    <h4> Github </h4>
+                </div>
+
+                <div>
+                    <address> 
+                        <i class="far fa-envelope fa-lg"></i> 
+                            <h4> Email</h4>
+                                maary.santos1@gmail.com
+                    </address>
+                </div>
+
+                <div>
+                    <address>
+                       <i class="fas fa-mobile-alt fa-lg"></i>
+                        <h4>Telefone</h4>
+                            (13) 988541172
+                    </address>
+                </div>
             </div>
         </div>
 
@@ -213,9 +238,6 @@
             Feito com <img src="./img/heart.png" alt="love" title="love"/> por Mari Santos | <a href="copyright.html">Créditos do Site</a>
 
         </div>
-
-      
-
     </footer>
 
 </body>
