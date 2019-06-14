@@ -47,7 +47,7 @@ header {
 
 .fx header{
    background-color: $bg-color-fx;
-   transition: all .4s;
+   transition: all .5s;
 }
 
 section div, article {
@@ -230,21 +230,19 @@ body{
    margin-bottom:$external-spacing;
    padding:$internal-spacing;
    background-color:#fefefe;
-    
  }
- .form-item .fa-school, .fa-user-graduate{
-    
+
+  .fa-school, .fa-user-graduate{
    margin: 5px 30px 0 0;
    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 14px;
    padding:20px;
    border-radius: 50%;
    float:left;
  }
+
  .form-item p{ margin-top:30px;}
  
 .clear{clear: left;}
-
-
 
 /*Portfólio*/
 
@@ -255,7 +253,6 @@ body{
     width:420px;
     height:260px;
     background-color: #fefefe;
-    
 }
 
 .port-item img{
@@ -264,8 +261,6 @@ body{
    overflow: hidden;
    border:none;
    border-radius:5px;
-   
-
 }
 
 .port-item a{
@@ -314,7 +309,6 @@ body{
    color:#34314B;
    margin-bottom: 0;
    text-align: center;   
-  
 }
 
 .contato-item:last-child{
@@ -333,15 +327,12 @@ body{
     margin-bottom:10px;
  }
 
-
 .contato-item a {
    color:#34314B;
- 
-
 }
+
 .contato-item a:hover {
    color:$purple-color;
-
 }
 
 .social li{
@@ -357,10 +348,11 @@ body{
    border-bottom: 1px dashed #34314B;
 }
 
-.fa-envelope, .fa-mobile-alt{
+.fa-envelope, .fa-mobile-alt, .fa-github, .fa-twitter, .fa-linkedin-in{
    display:block;
    margin-bottom:15px;
 }
+
 address{
    font-style: normal;
 }
@@ -384,19 +376,16 @@ footer{
   footer img {
      width:25px;
      height:25px;
-     
      animation : pulse 1s infinite alternate ease-in-out;
  
   }
 
   footer a{
      margin-right:5px;
-   
   }
 
   footer a:hover{
    text-decoration: underline;
-   
 }
 
 //pagina copyright
