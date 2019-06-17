@@ -41,7 +41,7 @@ header {
     font-family:'Hind', sans-serif;
     font-weight:300;
     color:#fff;
-    background-color: rgba(36, 36, 51, 0);
+    background-color:rgba(36, 36, 51, 0);
     height: 50px;
 }
 
@@ -57,10 +57,10 @@ section div, article {
 header ul li { 
    list-style: none;
    display: inline;
-   font-size:14px;
 }
 
-/* Cabeçalho*/
+
+/*A geral */
 a{
    text-decoration: none;
    padding:5px;
@@ -71,9 +71,11 @@ a:hover{
    color: $purple-color;
 }
 
+/* Cabeçalho*/
 /*logo*/
-a img{
+header a img{
    width:120px;
+   height: 35px;
 }
 
 section{
@@ -97,10 +99,12 @@ section h1 {
    flex-basis: 960px;
    padding-bottom:$internal-spacing;
 }
+
 body{
    margin-top:0;
 }
 
+/*Intro*/
 #intro {
    position: relative;
    width: 100%;
@@ -112,11 +116,10 @@ body{
    background-position:center center;
    background-size:cover;
    background-repeat:no-repeat;
-   
 }
+
 .fa-angle-down{
    color:#fff;
-   //#574AE2;
 }
 
 .scroll-down-icon {
@@ -136,7 +139,6 @@ body{
 }
 
 #intro .row-1{
-   
    position: absolute;
    top:200px;
    right:10px;
@@ -205,7 +207,6 @@ body{
 
 
 .idiomas .ul-idiomas li {
-   
   // text-align:center;
    display:inline;
   
@@ -316,11 +317,13 @@ body{
    background-color:#ccc;
    justify-content: space-between;
    align-items: flex-start;
-   flex-direction: row-reverse;       
+   flex-direction: row-reverse;   
+  
  }
 
  .contato-item div{
     padding:$internal-spacing;
+   
  }
 
  .contato-item div h4,span i{
