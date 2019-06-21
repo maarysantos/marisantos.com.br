@@ -179,7 +179,8 @@ section h1 {
    flex-direction: column;
    flex:1;
    padding:0;
-   width:calc(960px / 4 );
+   padding:$internal-spacing;
+   width:calc (100% / 4 );
 }
 
 .skill-item:nth-child(4){
@@ -229,7 +230,8 @@ section h1 {
    float:left;
  }
 
-.clear{clear: left;}
+.clear{clear: left;
+}
 
 .form-item h3{margin-top:20px} //para versão mobile tirar ess atributo
 
@@ -299,23 +301,20 @@ section h1 {
    text-align: center;   
 }
 
+
 .contato-item:last-child{
    width:100%;
-   background-color:#ccc;
    justify-content: space-between;
-   align-items: flex-start;
    flex-direction: row-reverse;   
-  
  }
 
  .contato-item div{
     padding:$internal-spacing;
-   
  }
 
- .contato-item div h4,span i{
-    margin-bottom:10px;
- }
+
+
+
 
 .contato-item a {
    color:#34314B;
@@ -378,3 +377,32 @@ footer{
    text-decoration: underline;
 }
 
+
+@media screen and (max-width:480px){
+   .form-item h3{margin-top:0;} 
+   .clear{margin-top:10px;}
+
+   #contato .contato-item div{
+      margin:0;
+   }
+
+   .contato-item:last-child{
+      align-items: center;
+      flex-direction: column-reverse;   
+    }
+
+   #skills{
+      flex-direction: column;
+      align-items: center;
+   }
+ 
+   .skill-item{
+      width:100%;
+   }
+
+   #skills .flex-basis-grow{
+      flex-basis:100%;
+   }
+}
+
+   
