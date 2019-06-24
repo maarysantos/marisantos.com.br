@@ -48,6 +48,7 @@ header {
     height: 50px;
 }
 
+/*Menu*/
 .menu {
    display:none;
    background: $purple-color;
@@ -82,11 +83,11 @@ header {
 
 .hamburguer:before {
    top: 8px;
-   right:0px;
+ //  right:0px;
 }
 
 .hamburguer:after {
-   right:0px;
+  //right:0px;
   top:16px;
 }
 
@@ -96,6 +97,7 @@ input {
 
 input:checked ~ label .hamburguer {
    transform: rotate(45deg);
+   top:14px;
 }
 
 input:checked ~ label .hamburguer:before {
@@ -105,7 +107,7 @@ input:checked ~ label .hamburguer:before {
 
 input:checked ~ label .hamburguer:after {
    transform: rotate(90deg);
-   bottom: 0;
+   top: 0;
 }
 
 input:checked ~ .nav {
@@ -125,11 +127,16 @@ input:checked ~ .nav {
    transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
    visibility: hidden;
    z-index: 2;
+   border-radius:3px;
    
 }
 .nav a{
-   color:$bg-color-fx;
+   color:#34314B;
 }
+
+.nav ul li{
+   display:block;
+} 
 /*logo*/
 header a img{
    width:120px;
