@@ -58,6 +58,10 @@ header {
    position: fixed;
    top: 8px;
    right: 20px;
+   -webkit-transition: right 0.1s cubic-bezier(0.35, 0.19, 0.45, 0.91);
+   transition: right 0.1s cubic-bezier(0.35, 0.19, 0.45, 0.91);
+
+   
 }
 
 /*Animação*/
@@ -109,24 +113,31 @@ input:checked ~ label .hamburguer:after {
    transform: rotate(90deg);
    top: 0;
 }
+
+.move .menu{
+  right:280px;
+
+}
 /*End Animação*/
 
-input:checked ~ .nav {
+.show .nav {
    opacity: 1;
    visibility: visible;
    width:70vw;
-   //right:100px;
+   right:2px;
+
 }
 
 .nav {
    position: fixed;
    padding:10px;
    top: 0;
+   right:0;
    max-width: 80%;
    height: 100vh;
    background-color: white;
-   -webkit-transition: right 0.3s cubic-bezier(0.35, 0.19, 0.45, 0.91);
-   transition: right 0.3s cubic-bezier(0.35, 0.19, 0.45, 0.91);
+   -webkit-transition: right 0.5s cubic-bezier(0.35, 0.19, 0.45, 0.91);
+   transition: right 0.5s cubic-bezier(0.35, 0.19, 0.45, 0.91);
    visibility: hidden;
    z-index: 4;
    
@@ -238,6 +249,7 @@ section h1 {
    color:#fff;
    font-size:3em;
    text-align:center;
+   line-height: 1em;
 }
 
 .row:nth-child(1){ 
