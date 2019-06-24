@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Seo Geral-->
+    <meta name="description" content="Programador Web em São Paulo">
+    <meta name="keywords" content="programador, portfolio,backend,frontend, asp.net, nodejs, react, javascript">
+    <meta name="author" content="Marilaine Caetano">
+
     <!--Favicon png  -->
     <link rel="icon" href="img/favicon.png" />
 
     <!-- CSS Personalizado -->
     <link href="./css/style.css" type ="text/css" rel="stylesheet"/>
 
-
-   
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css?family=Hind:300,400,600&display=swap" rel="stylesheet"> 
    
@@ -29,11 +32,27 @@
             <a href="#">
                 <img src="images/logo.svg" alt="Logo" title="Logo"/>
             </a>
+
+            <input id="menu-hamburguer" type="checkbox">
+
+            <label for="menu-hamburguer">
+                <div class="menu">
+                    <span class="hamburguer"></span>
+                </div>
+            </label>
+            <div class="nav">
+            <ul >
+                <li><a href='index.html'>HOME</a></li>
+                <li><a href='#sobre'>SOBRE</a></li>
+                <li><a href='#contato'>CONTATO</a></li>
+            </ul>
+           </div>
+            
             <nav>
                 <ul>
-                    <a href="index.html"><li>HOME</li></a>
-                    <a href="#sobre"><li>SOBRE</li></a>
-                    <a href="#contato"><li>CONTATO</li></a>
+                    <li> <a href="index.html">HOME</a> </li>
+                    <li><a href="#sobre">SOBRE</a></li>
+                    <li><a href="#contato"><li>CONTATO</a></li>
                     <!-- <a href="#"><li>BLOG</li></a> -->
                 </ul>
             </nav>
@@ -132,7 +151,7 @@
     </section>
 
     <!--Formação Acadêmica -->
-    <section id="formacao" class="container ">
+    <section id="formacao" class="container">
         <h1 class="flex-basis-grow">Formação Acadêmica</h1>
 
         <div class="form-item">

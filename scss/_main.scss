@@ -48,6 +48,88 @@ header {
     height: 50px;
 }
 
+.menu {
+   display:none;
+   background: $purple-color;
+   border-radius: 3px;
+   width: 30px;
+   height: 30px;
+   position: fixed;
+   top: 8px;
+   right: 20px;
+}
+
+.hamburguer {
+   position: relative;
+   display: block;
+   background: #fff;
+   width: 20px;
+   height: 2px;
+   top: 6px;
+   right: -5px;
+   transition: .5s ease-in-out;
+}
+.hamburguer:before,
+.hamburguer:after {
+   background: #fff;
+   content: '';
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   transition: .5s ease-in-out;
+}
+
+.hamburguer:before {
+   top: 8px;
+   right:0px;
+}
+
+.hamburguer:after {
+   right:0px;
+  top:16px;
+}
+
+input {
+   display: none;
+}
+
+input:checked ~ label .hamburguer {
+   transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+   transform: rotate(90deg);
+   top: 0;
+}
+
+input:checked ~ label .hamburguer:after {
+   transform: rotate(90deg);
+   bottom: 0;
+}
+
+input:checked ~ .nav {
+   opacity: 1;
+   visibility: visible;
+}
+
+.nav {
+   position: fixed;
+   top: 50%;
+   right: 0;
+   background-color:#fff;
+ 
+   transform: translate(-50%, -50%);
+   list-style: none;
+   opacity: 0;
+   transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
+   visibility: hidden;
+   z-index: 2;
+   
+}
+.nav a{
+   color:$bg-color-fx;
+}
 /*logo*/
 header a img{
    width:120px;
@@ -66,6 +148,7 @@ header ul li {
    list-style: none;
    display: inline;
 }
+
 
 
 /*Link geral */
@@ -95,7 +178,8 @@ section div, article {
 
 section h1 {
    font-weight:600;
-   color: #34314B;
+   color: $purple-color;
+   //#34314B
 }
 
 /*Para H1 ocupar a linha inteira*/
@@ -177,9 +261,9 @@ section h1 {
 .skill-item{
    display:flex;
    flex-direction: column;
-   flex:1;
-   padding:0;
-   padding:$internal-spacing;
+   //flex:1;
+   //padding:0;
+  // padding:$internal-spacing;
    width:calc (100% / 4 );
 }
 
@@ -301,6 +385,10 @@ section h1 {
    text-align: center;   
 }
 
+#contato div{
+   background-color:inherit;
+} 
+
 
 .contato-item:last-child{
    width:100%;
@@ -311,10 +399,6 @@ section h1 {
  .contato-item div{
     padding:$internal-spacing;
  }
-
-
-
-
 
 .contato-item a {
    color:#34314B;
@@ -379,11 +463,25 @@ footer{
 
 
 @media screen and (max-width:480px){
+   header{
+      position:absolute;
+   }
+
+   header nav{
+     display:none;
+   }
+
+   header .menu{
+      display:flex;
+   }
+
+  
+
    .form-item h3{margin-top:0;} 
    .clear{margin-top:10px;}
 
    #contato .contato-item div{
-      margin:0;
+      margin:0 auto;
    }
 
    .contato-item:last-child{
@@ -395,13 +493,14 @@ footer{
       flex-direction: column;
       align-items: center;
    }
- 
-   .skill-item{
+
+  /* .skill-item{
       width:100%;
-   }
+   }*/
 
    #skills .flex-basis-grow{
-      flex-basis:100%;
+     align-items: initial;
+     flex-basis:100%;
    }
 }
 
