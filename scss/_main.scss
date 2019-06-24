@@ -50,7 +50,7 @@ header {
 
 /*Menu*/
 .menu {
-   display:none;
+   display:none; //para desktop
    background: $purple-color;
    border-radius: 3px;
    width: 30px;
@@ -60,9 +60,10 @@ header {
    right: 20px;
 }
 
+/*Animação*/
 .hamburguer {
    position: relative;
-   display: block;
+   display: inline-block;
    background: #fff;
    width: 20px;
    height: 2px;
@@ -83,17 +84,16 @@ header {
 
 .hamburguer:before {
    top: 8px;
- //  right:0px;
 }
 
 .hamburguer:after {
-  //right:0px;
-  top:16px;
+   top:16px;
 }
 
 input {
    display: none;
 }
+
 
 input:checked ~ label .hamburguer {
    transform: rotate(45deg);
@@ -109,27 +109,30 @@ input:checked ~ label .hamburguer:after {
    transform: rotate(90deg);
    top: 0;
 }
+/*End Animação*/
 
 input:checked ~ .nav {
    opacity: 1;
    visibility: visible;
+   width:70vw;
+   //right:100px;
 }
 
 .nav {
    position: fixed;
-   top: 50%;
-   right: 0;
-   background-color:#fff;
- 
-   transform: translate(-50%, -50%);
-   list-style: none;
-   opacity: 0;
-   transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
+   padding:10px;
+   top: 0;
+   max-width: 80%;
+   height: 100vh;
+   background-color: white;
+   -webkit-transition: right 0.3s cubic-bezier(0.35, 0.19, 0.45, 0.91);
+   transition: right 0.3s cubic-bezier(0.35, 0.19, 0.45, 0.91);
    visibility: hidden;
-   z-index: 2;
+   z-index: 4;
    
 }
 .nav a{
+   font-weight:600;
    color:#34314B;
 }
 
@@ -248,6 +251,9 @@ section h1 {
 }
 
 /* Sobre - foto */
+#sobre {
+   background:#F4F6F7;
+}
 #sobre img{
     float:left;
     width:$size;
